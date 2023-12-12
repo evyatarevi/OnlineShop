@@ -1,0 +1,29 @@
+<%- include('includes/head.ejs') %>
+<link rel="stylesheet" href="/styles/cart.css">
+<script src="/scripts/cart.js" defer></script>
+</head>
+<body>
+    <%- include('includes/header.ejs') %>
+    <div id="cart-products-list">
+        <h1>Your Cart</h1>
+        <% cartArray.forEach(element => {  %>
+            <div class="product-card" data-id="<%= element.id %>">
+                <div>
+                    <h3><%= element.title %></h3>
+                    <span class="total-price-product">$<%= element.price * element.amount %></span>
+                    <span class="price-product">($<%= element.price%>)</span>
+                </div>
+                <div class="amount-div">
+                    <input class="amount-input" type="number" value="<%= element.amount %>" min="1">
+                    <button class="update-btn">Update</button>
+                </div>
+            </div>
+        
+        <% }); %>
+        <div class="buy-product-div">
+            <span id="sum-total-prices">Total: $</span>
+            <button class="buy-btn">Buy Products</button>
+        </div>
+    </div>
+</body>
+</html>

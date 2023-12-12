@@ -1,0 +1,35 @@
+.product-div{
+    border: solid rgba(241, 119, 48, 0.2) 1px;
+    width: 200px;
+    padding: 10px;
+    margin: 28px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 8px 10px rgba(0, 0, 0, 0.2);
+}
+.addProduct-btn{
+    display: block;
+    padding: 0;
+    margin: 30px auto 10px auto;
+    font-size: 16px;
+    font-family: inherit;
+    color: rgb(241, 119, 48);
+    background-color: transparent;
+    border: none;
+}
+#productsList-div{
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 40px;
+}
+.available{
+    color: greenyellow;
+}
+.not-available{
+    color: red;
+}
+.product-div>a{
+    color: inherit;
+}
+.product-div>button{
+    cursor: pointer;
+}

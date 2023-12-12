@@ -1,0 +1,24 @@
+
+
+<%- include('includes/head.ejs')  %>
+<link rel="stylesheet" href="/styles/shop.css">
+<script src="/scripts/shop.js" defer></script>
+</head>
+  <body>
+    <%- include('includes/header.ejs') %>
+    <div id="productsList-div">
+      <% productsArray.forEach(product => { %>
+        <div id="<%= product.id %>" class="product-div" data-product-id="<%= product.id %>">
+          <img src="<%= product.image %>" alt="ein-gedi image" style="width: 200px;">
+          <h2><%= product.title %></h2>
+          <!-- <p><%= product.description %></p> -->
+          <span><%= product.price %> &#8362;</span>
+          <p class="<%= product.available %>"><%= product.available %></p>
+          <a href="">More details &#8594;</a>
+            <button id="add-product-btn" class="addProduct-btn" type="submit">Add to cart &#128722;</button>
+        </div>
+      <% }); %>
+    </div>
+
+  </body>
+</html>

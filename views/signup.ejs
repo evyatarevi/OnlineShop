@@ -1,0 +1,34 @@
+
+<%- include('includes/head')  %>
+<link rel="stylesheet" href="/styles/form.css">
+</head>
+<body>
+    <%- include('includes/header.ejs') %>
+    <div class="main-div">
+        <h1>Create New Account</h1>
+        <form action="/signup" method="post">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email">
+
+            <label for="confirm-email">Confirm Email</label>
+            <input id="confirm-email" name="confirm-email" type="email">
+
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password">
+
+            <label for="full-name">Full-Name</label>
+            <input id="full-name" name="full-name" type="text">
+
+            <label for="street">Street</label>
+            <input id="street" name="street" type="text">
+
+            <label for="city">City</label>
+            <input id="city" name="city" type="text">
+            
+            <button type="submit">Create Account</button>
+        </form>
+        <a href="/login">Login instead</a>
+    </div>
+    
+</body>
+</html>

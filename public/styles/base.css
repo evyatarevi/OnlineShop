@@ -1,0 +1,9 @@
+body{
+    background-color: rgb(37, 37, 37);
+    padding: 0 200px;
+    color: white;
+    font-family: 'Bricolage Grotesque', sans-serif;
+}
+a{
+    text-decoration: none;
+}

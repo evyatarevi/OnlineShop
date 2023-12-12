@@ -1,0 +1,58 @@
+
+form{
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    color: gray;
+    font-weight: bold;
+}
+form>input{
+    margin: 10px 130px;
+    padding: 5px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: solid 3px black;
+    box-shadow: 0px 0px 8px 10px rgba(0, 0, 0, 0.2);
+}
+form>input:focus{
+    border: solid 3px rgb(248, 157, 103);
+    outline: none;
+}
+form>button{
+    font-size: 24px;
+    border: none;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 20px 0;
+    color: black;
+    border: solid 2px black;
+    background-color: rgb(241, 119, 48) ;
+    text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.357);
+    font-weight: 600;
+}
+form>button:hover{
+    cursor: pointer;
+    background-color: black ;
+    color:rgb(241, 119, 48) ;
+    border: solid 2px rgb(241, 119, 48) ;
+}
+.main-div{
+    color: rgb(100, 100, 100);
+    font-size: 24px;
+    padding: 30px;
+    margin: 20px 150px;
+    background-color: rgb(30, 30, 30);
+    text-align: center;
+    box-shadow: 0px 0px 8px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    border: solid rgba(241, 119, 48, 0.2) 1px;
+
+}
+.main-div>a{
+    color: white;
+    font-size: 18px;
+    text-shadow: 0px 0px 4px #ffffff5b;
+}
+.main-div>a:hover{
+    text-shadow: 0px 0px 20px #ffffff;
+}
