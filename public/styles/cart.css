@@ -33,7 +33,7 @@
     text-align: center;
     background-color: rgb(241, 241, 241);
 }
-.update-btn{
+.delete-btn{
     padding: 5px;
     border-radius: 5px;
     color: rgb(248, 157, 103);
@@ -47,6 +47,6 @@
     background-color: rgb(37, 37, 37);
     border: solid rgba(241, 119, 48, 0.2) 2px;
 }
-.update-btn:hover, .buy-btn:hover{
+.delete-btn:hover, .buy-btn:hover{
     cursor: pointer;
 }

@@ -1,7 +1,6 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
-const { json } = require('body-parser');
 
 const app = express();
 
@@ -42,7 +41,7 @@ app.get('/cart', (req, res) => {
                 cartArray[i].title = productsArray[j].title;
                 cartArray[i].description = productsArray[j].description;
                 cartArray[i].price = productsArray[j].price;
-                continue;
+                break;
             }
         }
     }
@@ -139,6 +138,26 @@ app.post('/updateCart', (req, res) => {
         res.json({message: error});
     }
 });
+
+app.post('/delete-product', (req, res) => {
+    const productId = req.body.id*1;
+    const cartArray = JSON.parse(fs.readFileSync(cartFilePath));
+
+    for(let i=0; i<cartArray.length; i++){
+        if(cartArray[i].id === productId){
+            cartArray.splice(i,1);
+            break;
+        }
+    }
+
+    try {
+        fs.writeFileSync(cartFilePath, JSON.stringify(cartArray));
+        res.json({message: 'Deleted successfully'});
+    } catch (error) {
+        res.json({message: error});
+    }
+});
+
 
 
 app.listen(3000, () => {

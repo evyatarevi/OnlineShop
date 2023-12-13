@@ -1,5 +1,5 @@
-[{"id":1,"image":"/images/ein-gedi.jpg","title": "title", "description": "description", "price": 50, "available": "not-available"}, 
-{"id":2,"image":"/images/ein-gedi.jpg","title": "title", "description": "description", "price": 52, "available": "available"},
+[{"id":1,"image":"/images/ein-gedi.jpg","title": "title", "description": "description", "price": 50.5, "available": "not-available"}, 
+{"id":2,"image":"/images/ein-gedi.jpg","title": "title", "description": "description", "price": 52.99, "available": "available"},
 {"id":3,"image":"/images/ein-gedi.jpg","title": "title", "description": "description", "price": 53, "available": "available"}, 
 {"id":4,"image":"/images/ein-gedi.jpg","title": "title", "description": "description", "price": 54, "available": "available"},
 {"id":5,"image":"/images/ein-gedi.jpg","title": "title", "description": "description", "price": 50, "available": "available"}, 

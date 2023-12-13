@@ -4,6 +4,7 @@
     productNumber.textContent = `${productNumber.textContent*1 + 1}`;
   };
   
+  //main app
   document.addEventListener('DOMContentLoaded', ()=>{
     console.log('DOMContentLoaded');
     const productsList = document.getElementById('productsList-div');
@@ -17,8 +18,10 @@
                 body: JSON.stringify({productId: productId})
             })
             .then(response => response.json())
-            .then(data => alert(data.message))
-            .then(data => changeProductNumber());
+            .then(data => {
+              console.log(data.message);
+              changeProductNumber();
+            })
         };
     });
   });
