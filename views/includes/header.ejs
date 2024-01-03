@@ -2,12 +2,24 @@
     <a href="../">Forever</a>
     <nav>
         <ul>
-            <li><a href="/">Shop</a></li>
+            <li><a href="/" class="header-btn">Shop</a></li>
             <li>
-                <a href="/cart">Cart <span id="sumCartProducts"></span></a>
+                <a href="/cart" class="header-btn">Cart <span id="sumCartProducts"></span></a>
             </li>
-            <li><a href="/signup">Signup</a></li>
-            <li><a href="/login">Login</a></li>
+            <% if(!locals.isAuth) { %>
+            <li><a href="/signup" class="header-btn">Signup</a></li>
+            <li><a href="/login" class="header-btn">Login</a></li>
+            <% } %>
+            <% if(locals.isAuth) { %>
+            <li>
+                <form action="/delete-user/2" method="POST" >
+                    <button type="submit" class="header-btn">Delete user 2</button> 
+                </form>
+            </li>
+            <li>
+                <form action="/logout" method="POST"><button type="submit" class="header-btn">Logout</button></form>
+            </li>
+            <% } %>
         </ul>
     </nav>
-</header>
+</header> 

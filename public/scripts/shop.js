@@ -1,8 +1,12 @@
 
+  const addProductToCart = (productId) => {
+
+  }
+  
   const changeProductNumber = () => {
     const productNumber = document.getElementById('sumCartProducts');
     productNumber.textContent = `${productNumber.textContent*1 + 1}`;
-  };
+  }
   
   //main app
   document.addEventListener('DOMContentLoaded', ()=>{
@@ -19,6 +23,10 @@
             })
             .then(response => response.json())
             .then(data => {
+              if(data.notVerified){
+                alert(data.message);
+                return;
+              }
               console.log(data.message);
               changeProductNumber();
             })

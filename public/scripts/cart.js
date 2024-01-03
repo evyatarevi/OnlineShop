@@ -51,8 +51,15 @@ const updateTotalAllPriceProducts = () => {
       sumTotalPrices += totalPriceProduct;
     }
   }
-
   sumTotalPrices = sumTotalPrices.toFixed(2);  //The toFixed method returns a string representing a number in fixed-point notation, with a specified number of digits after the decimal point.
+  
+  //remove zero numbers after the dot:
+  if(sumTotalPrices[sumTotalPrices.length-1] == 0){
+      sumTotalPrices = sumTotalPrices.slice(0,-1);
+      if(sumTotalPrices[sumTotalPrices.length-1] == 0){
+        sumTotalPrices = sumTotalPrices.slice(0,-2); //with -2 I slice the end number and the dot.
+      }
+    }
 
   document.getElementById(
     "sum-total-prices"
